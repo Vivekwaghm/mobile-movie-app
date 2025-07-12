@@ -1,25 +1,18 @@
 import { icons } from '@/constants/icons';
-import { Link } from 'expo-router'
-import React from 'react'
-import { Dimensions, Image, Text, TouchableOpacity, View } from 'react-native'
+import { Link } from 'expo-router';
+import React from 'react';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
 
 const MovieCard = ({id, poster_path, title, vote_average, release_date}) => {
 
-     const screenWidth = Dimensions.get('window').width;
-  const numColumns = 3;
-  const spacing = 16; // total horizontal padding/margin (8 on each side)
-  const itemWidth = (screenWidth - spacing * (numColumns + 1)) / numColumns;
-    
-  return (
-    <Link href={`/movies/${id}`} asChild>
-        <TouchableOpacity 
-        // style={{
+     // style={{
         //   width: itemWidth,
         //   margin: spacing / 2,
         // }}
-        className='w-[30%]'
-        
-        >
+    
+  return (
+    <Link href={`/movies/${id}`} asChild>
+        <TouchableOpacity className='w-[30%]'>
             <Image 
             className='w-full h-52 rounded-lg'
             resizeMode='cover'

@@ -9,9 +9,7 @@ const useFetch = (fetchFunction, autoFetch = true) =>{
         try {
             setLoading(true)
             setError(null)
-
             const result = await fetchFunction();
-
             setData(result)
             
         } catch (error) {
